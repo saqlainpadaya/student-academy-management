@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+select, button {
+    padding: 5px;
+    margin: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.chart-container {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    vertical-align: top;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+section {
+    padding-top: 100px;
+    text-align: center;
+}
+
+/* Home section */
+#home {
+    background: lightblue;
+    min-height: 100vh;
+}
+#studenthome{
+ background: rgb(239, 227, 187);
+    min-height: 100vh;
+}
+/* Attendance section */
+#attendance {
+    background-color: rebeccapurple;
+    width: 100%;
+    padding: 40px 0;
+    min-height: 100vh;
+}
+#marks {
+    background-color: rgb(211, 91, 193);
+    width: 100%;
+    padding: 40px 0;
+    min-height: 100vh;
+}
+* {
+    box-sizing: border-box;
+}
+/* Logout button (class version) */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    z-index: 1000;
+    
+}
+
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.nav-left a:hover {
+    background: #555;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.nav-right button {
+    padding: 6px 14px; 
+     border: 10; 
+     border-radius: 20px; 
+     cursor: pointer;
+      font-size: 16px;
+      margin: 0;
+}
+
+
