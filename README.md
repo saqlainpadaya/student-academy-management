@@ -30,7 +30,7 @@ A web-based system to manage student academic records, enrollments, and course d
 🖼️ Screenshots 
 
 .Database EER Diagram 
-![alt text](img/image.png)
+![alt text](img/image-8.png)
 
  .Student 
     -Dashbord
