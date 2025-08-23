@@ -28,11 +28,11 @@
         if (response.success && response.type == "student") {
           //student_login(); 
           sessionStorage.setItem('student_id', response.student_id);
-          window.location.href = 'dashboard.html';
+          window.location.href = 'studentDashboard.html';
         } else if(response.success && response.type == "teacher"){
             //teacher_login();
             sessionStorage.setItem('teacher_id', response.teacher_id);
-            window.location.href = 'teacherdashboard.html';
+            window.location.href = 'teacherDashboard.html';
         }
         else {
           alert(response.message || 'Password OR Email Incorrect');
@@ -41,35 +41,6 @@
       .catch(() => alert("Password OR Email Incorrect"));
     }
 
-    function teacher_login(){
-       const email = document.getElementById('email').value;
-      fetch('http://localhost:3000/api/Tlogin', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ email })
-      })
-      .then(res => res.json())
-      .then(teacher => {
-        sessionStorage.setItem('teacher_id', teacher.teacher_id);
-        window.location.href = 'teacherdashboard.html';
-      })
-      .catch(() => alert("Login failed"));
-    }
-
-    function student_login() {
-      const email = document.getElementById('email').value;
-      fetch('http://localhost:3000/api/login', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ email })
-      })
-      .then(res => res.json())
-      .then(student => {
-        sessionStorage.setItem('student_id', student.student_id);
-        window.location.href = 'dashboard.html';
-      })
-      .catch(() => alert("Login failed"));
-    }
  function myFunction() {
         var x = document.getElementById("password");
         if (x.type === "password") {

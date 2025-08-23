@@ -1,0 +1,378 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+#home {
+  background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.home-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.home-card h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #c2185b;
+}
+
+.home-card p {
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+#charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.chart-container {
+  background: #fff0f5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.chart-container h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #d81b60;
+}
+
+
+select, button {
+    padding: 5px;
+    margin: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+section {
+    padding-top: 100px;
+    text-align: center;
+}
+
+#attendance {
+  background: linear-gradient(135deg, #b986ef, #043282);
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Card container */
+#attendance .attendance-card {
+  background: #fff;
+  padding: 30px;
+  max-width: 1150px;
+  width: 100%;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Heading */
+#attendance h1 {
+  font-size: 26px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+#attendance p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Dropdowns */
+#attendance label {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+#attendance select {
+  padding: 8px 12px;
+  margin: 0 12px 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Table */
+#attendance table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#attendance th {
+  background: #2575fc;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-size: 15px;
+}
+
+#attendance td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+/* Row effects */
+#attendance tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+#attendance tr:hover {
+  background-color: #eef4ff;
+}
+
+/* Dropdown inside table */
+#attendance td select {
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* Save Button */
+#saveBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+#saveBtn:hover {
+  background: #219150;
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.header-section h1 {
+  font-size: 30px;
+  color: #2c3e50;
+  margin-bottom: 6px;
+}
+.header-section p {
+  font-size: 15px;
+  color: #666;
+}
+
+/* Filter Box */
+.filter-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/* Logout button */
+.logout-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.logout-btn:hover {
+    background: #c0392b;
+}
+
+#marks {
+  background:  linear-gradient(135deg, #f084dd 0%, #b54b87 100%);;
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.marks-card {
+  background: #fff;
+  padding: 30px;
+  max-width: 1150px;
+  width: 100%;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.marks-card h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.marks-card p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin: 15px 0;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+select:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 6px rgba(37, 117, 252, 0.5);
+}
+
+#marksstudentTable {
+  margin-top: 25px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#marksstudentTable th, 
+#marksstudentTable td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+#marksstudentTable th {
+  background-color: #110710;
+  color: white;
+}
+
+#marksstudentTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#markssaveBtn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background:  #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#markssaveBtn:hover {
+  background: #1a5ed8;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+/* Logout button (class version) */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    z-index: 1000;
+    
+}
+
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.nav-left a:hover {
+    background: #555;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.nav-right button {
+    padding: 6px 14px; 
+     border: 10; 
+     border-radius: 20px; 
+     cursor: pointer;
+      font-size: 16px;
+      margin: 0;
+}
+
+

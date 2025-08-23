@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f6d365, #fda085); 
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #2c3e50;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.nav-left a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav-left a:hover {
+  color: #f39c12;
+}
+
+/* Logout button */
+.nav-right button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #f6f2f1;
+  color: rgb(13, 13, 13);
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav-right button:hover {
+  background: #c0392b;
+}
+
+/* Main section */
+#studenthome {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center horizontally */
+  justify-content: flex-start;
+  padding-top: 90px; /* spacing below navbar */
+}
+
+/* Card container */
+.results-container {
+  background: #fff;
+  width: 90%;
+  max-width: 1000px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Title */
+.results-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Table */
+.results-container table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.results-container th {
+  background: #2c3e50;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.results-container td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternating rows */
+.results-container tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.results-container tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* Hover */
+.results-container tr:hover {
+  background: #f1f7ff;
+}
+
+* {
+    box-sizing: border-box;
+}

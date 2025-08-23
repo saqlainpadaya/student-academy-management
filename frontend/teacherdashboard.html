@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Teacher Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/teacherStyle.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -25,19 +25,40 @@
 
 <!-- Sections -->
 <section id="home">
+  <div class="home-card">
     <h1>📊 Course-wise Your Performance</h1>
     <p>This is the home section with your performance details.</p>
-    <div id="charts"></div>  
+     
+    <div id="charts">
+    </div>  
+
+    </div>
 </section>
 
-<section id="attendance">
-    <h1>📝 Attendance System</h1>
-    <p>This is the attendance tracking section.</p>
-    <label>Department: </label>
-  <select id="departmentDropdown"></select>
 
-  <label>Course: </label>
-  <select id="courseDropdown"></select>
+<section id="attendance">
+    <div class="attendance-card">
+    
+  <div class="header-section">
+  <h1>📝 Attendance System</h1>
+  <p>This is the attendance tracking section.</p>
+</div>
+
+<div class="filter-box">
+    <div class="filter-item">
+      <label for="departmentDropdown">🎓 Department</label>
+      <select id="departmentDropdown">
+        <option>Select Department</option>
+      </select>
+    </div>
+
+    <div class="filter-item">
+      <label for="courseDropdown">📘 Course</label>
+      <select id="courseDropdown">
+        <option>Select Course</option>
+      </select>
+    </div>
+</div>
 
   <table id="studentTable" style="display:none;">
     <thead>
@@ -50,33 +71,46 @@
     <tbody></tbody>
   </table>
   <button id="saveBtn" style="display:none;">Save Attendance</button>
+  </div>
 </section>
 
 <section id="marks">
-  <h1><i class='fa fa-check-square'></i> Marks Entry</h1>
-  <p>Enter marks for students in a selected course.</p>
+  
+  <div class="marks-card">
+    <div class="header-section">
+    <h1><i class='fa fa-check-square'></i> Marks Entry</h1>
+    <p>Enter marks for students in a selected course.</p>
+<div class="filter-box">
+    <div class="form-group">
+      <label for="marksDepartmentDropdown">Department</label>
+      <select id="marksDepartmentDropdown">
+        <option>Select Department</option>
+      </select>
+    </div>
 
-  <label>Department: </label>
-  <select id="marksDepartmentDropdown"></select>
+    <div class="form-group">
+      <label for="marksCourseDropdown">Course</label>
+      <select id="marksCourseDropdown">
+        <option>Select Course</option>
+      </select>
+    </div>
+  </div>
+</div>
+    <table id="marksstudentTable" style="display:none;">
+      <thead>
+        <tr>
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>Exam Type</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
 
-  <label>Course: </label>
-  <select id="marksCourseDropdown"></select>
-
-  <table id="marksstudentTable" style="display:none;">
-    <thead>
-      <tr>
-        <th>Roll No</th>
-        <th>Name</th>
-        <th>Exam Type</th>
-        <th>Score</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-
-  <button id="markssaveBtn" style="display:none;">Save Marks</button>
+    <button id="markssaveBtn" style="display:none;">Save Marks</button>
+  </div>
 </section>
-
 
 
   <script>
