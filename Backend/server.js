@@ -118,6 +118,7 @@ app.get('/api/course/:courseId/students', (req, res) => {
      select  distinct  S.student_id,S.name, S.email
       from enrollments e 
      inner JOIN students S ON S.student_id = e.student_id 
+     WHERE e.course_id= ? order by S.student_id;
    
   `;
 
