@@ -31,7 +31,7 @@ A web-based system to manage student academic records, enrollments, and course d
 
  .Student 
     -Dashbord
-    ![alt text](/img/image.png)
+    ![alt text](img/image.png)
 
  .Teacher 
     -Dashboard
