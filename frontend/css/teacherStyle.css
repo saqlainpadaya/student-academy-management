@@ -1,8 +1,8 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    scroll-behavior: smooth;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  scroll-behavior: smooth;
 }
 
 #home {
@@ -56,38 +56,38 @@ body {
   color: #d81b60;
 }
 
-
-select, button {
-    padding: 5px;
-    margin: 5px;
+select,
+button {
+  padding: 5px;
+  margin: 5px;
 }
 
 table {
-    border-collapse: collapse;
-    margin: 20px auto;
-    width: 80%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  width: 80%;
 }
 
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
 }
-
 
 h1 {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 28px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 28px;
 }
 
 h2 {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 section {
-    padding-top: 100px;
-    text-align: center;
+  padding-top: 100px;
+  text-align: center;
 }
 
 #attendance {
@@ -107,7 +107,7 @@ section {
   max-width: 1150px;
   width: 100%;
   border-radius: 50px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
@@ -223,24 +223,23 @@ section {
   align-items: flex-start;
 }
 
-
 /* Logout button */
 .logout-btn {
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
 }
 .logout-btn:hover {
-    background: #c0392b;
+  background: #c0392b;
 }
 
 #marks {
-  background:  linear-gradient(135deg, #f084dd 0%, #b54b87 100%);;
+  background: linear-gradient(135deg, #f084dd 0%, #b54b87 100%);
   width: 100%;
   min-height: 100vh;
   padding: 50px 20px;
@@ -255,7 +254,7 @@ section {
   max-width: 1150px;
   width: 100%;
   border-radius: 50px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
@@ -300,7 +299,7 @@ select:focus {
   border-collapse: collapse;
 }
 
-#marksstudentTable th, 
+#marksstudentTable th,
 #marksstudentTable td {
   border: 1px solid #ddd;
   padding: 12px;
@@ -319,7 +318,7 @@ select:focus {
 #markssaveBtn {
   margin-top: 20px;
   padding: 12px 25px;
-  background:  #27ae60;
+  background: #27ae60;
   color: white;
   border: none;
   border-radius: 8px;
@@ -332,47 +331,41 @@ select:focus {
   background: #1a5ed8;
 }
 
-
-
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* Logout button (class version) */
 nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: #333;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    z-index: 1000;
-    
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
 .nav-left a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 16px;
-    transition: background 0.3s;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 16px;
+  transition: background 0.3s;
 }
 
 .nav-left a:hover {
-    background: #555;
-    padding: 5px 10px;
-    border-radius: 4px;
+  background: #555;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
 .nav-right button {
-    padding: 6px 14px; 
-     border: 10; 
-     border-radius: 20px; 
-     cursor: pointer;
-      font-size: 16px;
-      margin: 0;
+  padding: 6px 14px;
+  border: 10;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0;
 }
-
-

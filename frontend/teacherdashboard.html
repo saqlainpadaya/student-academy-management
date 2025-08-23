@@ -1,118 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Teacher Dashboard</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="css/teacherStyle.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
- 
- 
-<nav>
-  <div class="nav-left">
-    <a href="#home">Home</a>
-    <a href="#attendance">Attendance</a>
-    <a href="#marks">Marks</a>
-  </div>
-  <div class="nav-right">
-    <button id="logoutBtn" onclick="logout()">Logout</button>
-  </div>
-</nav>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Teacher Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/teacherStyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="#home">Home</a>
+        <a href="#attendance">Attendance</a>
+        <a href="#marks">Marks</a>
+      </div>
+      <div class="nav-right">
+        <button id="logoutBtn" onclick="logout()">Logout</button>
+      </div>
+    </nav>
 
+    <!-- Sections -->
+    <section id="home">
+      <div class="home-card">
+        <h1>📊 Course-wise Your Performance</h1>
+        <p>This is the home section with your performance details.</p>
 
-<!-- Sections -->
-<section id="home">
-  <div class="home-card">
-    <h1>📊 Course-wise Your Performance</h1>
-    <p>This is the home section with your performance details.</p>
-     
-    <div id="charts">
-    </div>  
+        <div id="charts"></div>
+      </div>
+    </section>
 
-    </div>
-</section>
+    <section id="attendance">
+      <div class="attendance-card">
+        <div class="header-section">
+          <h1>📝 Attendance System</h1>
+          <p>This is the attendance tracking section.</p>
+        </div>
 
+        <div class="filter-box">
+          <div class="filter-item">
+            <label for="departmentDropdown">🎓 Department</label>
+            <select id="departmentDropdown">
+              <option>Select Department</option>
+            </select>
+          </div>
 
-<section id="attendance">
-    <div class="attendance-card">
-    
-  <div class="header-section">
-  <h1>📝 Attendance System</h1>
-  <p>This is the attendance tracking section.</p>
-</div>
+          <div class="filter-item">
+            <label for="courseDropdown">📘 Course</label>
+            <select id="courseDropdown">
+              <option>Select Course</option>
+            </select>
+          </div>
+        </div>
 
-<div class="filter-box">
-    <div class="filter-item">
-      <label for="departmentDropdown">🎓 Department</label>
-      <select id="departmentDropdown">
-        <option>Select Department</option>
-      </select>
-    </div>
+        <table id="studentTable" style="display: none">
+          <thead>
+            <tr>
+              <th>Roll No</th>
+              <th>Name</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button id="saveBtn" style="display: none">Save Attendance</button>
+      </div>
+    </section>
 
-    <div class="filter-item">
-      <label for="courseDropdown">📘 Course</label>
-      <select id="courseDropdown">
-        <option>Select Course</option>
-      </select>
-    </div>
-</div>
+    <section id="marks">
+      <div class="marks-card">
+        <div class="header-section">
+          <h1><i class="fa fa-check-square"></i> Marks Entry</h1>
+          <p>Enter marks for students in a selected course.</p>
+          <div class="filter-box">
+            <div class="form-group">
+              <label for="marksDepartmentDropdown">Department</label>
+              <select id="marksDepartmentDropdown">
+                <option>Select Department</option>
+              </select>
+            </div>
 
-  <table id="studentTable" style="display:none;">
-    <thead>
-      <tr>
-        <th>Roll No</th>
-        <th>Name</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-  <button id="saveBtn" style="display:none;">Save Attendance</button>
-  </div>
-</section>
+            <div class="form-group">
+              <label for="marksCourseDropdown">Course</label>
+              <select id="marksCourseDropdown">
+                <option>Select Course</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <table id="marksstudentTable" style="display: none">
+          <thead>
+            <tr>
+              <th>Roll No</th>
+              <th>Name</th>
+              <th>Exam Type</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
 
-<section id="marks">
-  
-  <div class="marks-card">
-    <div class="header-section">
-    <h1><i class='fa fa-check-square'></i> Marks Entry</h1>
-    <p>Enter marks for students in a selected course.</p>
-<div class="filter-box">
-    <div class="form-group">
-      <label for="marksDepartmentDropdown">Department</label>
-      <select id="marksDepartmentDropdown">
-        <option>Select Department</option>
-      </select>
-    </div>
+        <button id="markssaveBtn" style="display: none">Save Marks</button>
+      </div>
+    </section>
 
-    <div class="form-group">
-      <label for="marksCourseDropdown">Course</label>
-      <select id="marksCourseDropdown">
-        <option>Select Course</option>
-      </select>
-    </div>
-  </div>
-</div>
-    <table id="marksstudentTable" style="display:none;">
-      <thead>
-        <tr>
-          <th>Roll No</th>
-          <th>Name</th>
-          <th>Exam Type</th>
-          <th>Score</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-
-    <button id="markssaveBtn" style="display:none;">Save Marks</button>
-  </div>
-</section>
-
-
-  <script src="js/teacher.js"> </script>
-</body>
+    <script src="js/teacher.js"></script>
+  </body>
 </html>

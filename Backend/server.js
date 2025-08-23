@@ -14,11 +14,11 @@ app.post('/api/pass', (req, res) => {
     if (result.length === 0) return res.status(404).json({ success: false, message: 'Email not found' });
 
     const decodedPassword = Buffer.from(result[0].password, 'base64').toString('utf8');
-    const type = result[0].type ;
-    const student_id = result[0].student_id ;
-    const teacher_id = result[0].teacher_id ;
+    const type = result[0].type;
+    const student_id = result[0].student_id;
+    const teacher_id = result[0].teacher_id;
     if (password === decodedPassword) {
-      res.json({ success: true , type,student_id,teacher_id });
+      res.json({ success: true, type, student_id, teacher_id });
     } else {
       res.json({ success: false, message: 'Invalid password' });
     }
@@ -27,21 +27,21 @@ app.post('/api/pass', (req, res) => {
 
 app.post('/api/login', (req, res) => {
   const { email } = req.body;
-  
+
   db.query('SELECT * FROM students WHERE email = ?', [email], (err, result) => {
     if (err) return res.status(500).send(err);
     if (result.length === 0) return res.status(404).send('Email not found');
-    res.send(result[0]); 
+    res.send(result[0]);
   });
 });
 
 app.post('/api/Tlogin', (req, res) => {
   const { email } = req.body;
-  
+
   db.query('SELECT * FROM teachers WHERE email = ?', [email], (err, result) => {
     if (err) return res.status(500).send(err);
     if (result.length === 0) return res.status(404).send('Email not found');
-    res.send(result[0]); 
+    res.send(result[0]);
   });
 });
 
@@ -133,7 +133,7 @@ app.get('/api/course/:courseId/students', (req, res) => {
 
 // 4. Save attendance
 app.post('/api/attendance', (req, res) => {
-  const attendanceList = req.body; 
+  const attendanceList = req.body;
   if (!Array.isArray(attendanceList) || attendanceList.length === 0) {
     return res.status(400).json({ message: 'Invalid attendance data' });
   }
@@ -155,9 +155,9 @@ app.post('/api/attendance', (req, res) => {
   });
 });
 
- // save marks
- app.post('/api/marks', (req, res) => {
-  const attendanceList = req.body; 
+// save marks
+app.post('/api/marks', (req, res) => {
+  const attendanceList = req.body;
   if (!Array.isArray(attendanceList) || attendanceList.length === 0) {
     return res.status(400).json({ message: 'Invalid attendance data' });
   }
